@@ -254,13 +254,13 @@ int main(){
 	cout << "Please enter an email: ";
 	getline(cin,email);
 
-	cout << "Please enter a password ";
+	cout << "Please enter a password: ";
 	getline(cin,password);
 
 	cout << "Please enter a bio: ";
 	getline(cin,bio);
 
-	cout << "Please enter a profile picture ";
+	cout << "Please enter a profile picture: ";
 	getline(cin,profilePicture);
 
 	// call eventTicket340 createOrganizer function 
