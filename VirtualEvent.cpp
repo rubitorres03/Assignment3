@@ -72,7 +72,7 @@ VirtualEvent::VirtualEvent(const std::string& name, const std::string& descripti
 	    std::cout<< "Enter audience type:  ";
 		std::getline(in, audience);
 
-        
+        EvntPtr = std::make_shared<VirtualEvent>(name,description,rating,soldTicketsCount,streamLink,audience);
 
         return in;
         
