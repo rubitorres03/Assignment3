@@ -56,7 +56,7 @@ VirtualEvent::VirtualEvent(const std::string& name, const std::string& descripti
 		std::cout<< "Enter description: ";
 		std::getline(in,description);
 
-		std::cout<< "Enter rating:";
+		std::cout<< "Enter rating: ";
 		std::getline(in,convert);
         rating = std::stoi(convert);
 
@@ -69,10 +69,10 @@ VirtualEvent::VirtualEvent(const std::string& name, const std::string& descripti
 		std::getline(in,streamLink);
 
 		
-	    std::cout<< "Enter audience type:  ";
+	    std::cout<< "Enter audience type: ";
 		std::getline(in, audience);
 
-        EvntPtr = std::make_shared<VirtualEvent>(name,description,rating,soldTicketsCount,streamLink,audience);
+        VirEventInput = std::make_shared<VirtualEvent>(name,description,rating,soldTicketsCount,streamLink,audience);
 
         return in;
         

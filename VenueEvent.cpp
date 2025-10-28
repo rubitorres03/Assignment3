@@ -75,11 +75,11 @@ std::istream& operator>>(std::istream& in, std::shared_ptr<VenueEvent>& VenEvent
 	    std::cout<< "Enter Date and Time: (Month/Day/Year)  ";
 		std::getline(in, dateTime);
 
-        std::cout<< "Enter capacity for event: "
+        std::cout<< "Enter capacity for event: ";
         std::getline(in,convert);
         capacity = std::stoi(convert);
 
-        EvntPtr = std::make_shared<VenueEvent>(name,description,rating,soldTicketsCount,venue,dateTime,capacity);
+        VenEventInput = std::make_shared<VenueEvent>(name,description,rating,soldTicketsCount,venue,dateTime,capacity);
 
         return in;
 }
