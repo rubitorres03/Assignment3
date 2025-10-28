@@ -239,38 +239,14 @@ int main(){
 	// With this implementation, the application will only have one organizer
 	EventTicket340 eventTicket340; 
 
-	cout << eventTicket340; // calls the operator over load inside EventTicket340
+	cout << eventTicket340; // calls the operator<< overload inside EventTicket340
 
 	
 	// TO DO: Ask the organizer to enter their information 
 	//        Instantiate a new Organizer object
 
-	cin >> eventTicket340;
-	//string username;
-	//string email;
-	//string password;
-	//string bio;
-	//string profilePicture;
-
-	//cout << "Please enter a username: ";
-	//getline(cin,username);
-
-	//cout << "Please enter an email: ";
-	//getline(cin,email);
-
-	//cout << "Please enter a password: ";
-	//getline(cin,password);
-
-	//cout << "Please enter a bio: ";
-	//getline(cin,bio);
-
-	//cout << "Please enter a profile picture: ";
-	//getline(cin,profilePicture);
-
-	// call eventTicket340 createOrganizer function 
-	// replace /*...*/ with the right parameters
-
-	//eventTicket340.createOrganizer(username,email,password,bio,profilePicture);
+	cin >> eventTicket340; // calls the operator>> overload inside EventTicket340
+	
 
 	// Retrieve the organizer 
 	Organizer currentOrganizer = eventTicket340.getOrganizer();

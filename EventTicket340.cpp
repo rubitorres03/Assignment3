@@ -25,11 +25,13 @@ Organizer EventTicket340::getOrganizer() const{
    return this->organizer;
 }
 
+// Operator<< overloading implementation that outputs Banner Message
 std::ostream& operator <<(std::ostream& os, const EventTicket340& event){
    os << "Welcome to EventTicket 340! " << std::endl;
    return os; 
 }
 
+// Operator>> overloading implementation that prompts for profile creation
 std::istream& operator>>(std::istream& in, EventTicket340& userInput){
    std::string username;
 	std::string email;

@@ -144,7 +144,7 @@ bool Organizer::operator==(const Organizer& otherOrganizer) const {
    return (Organizer::username == otherOrganizer.username) && (Organizer::email == otherOrganizer.email);
 }
 
-// Operator << overloading implementation
+// Operator<< overloading implementation that displays Organizer Profile
 std::ostream& operator<<(std::ostream& os, const Organizer& org){
    os << "User Name: " << org.username << "\n" 
       << "Email: " << org.email << "\n" 
