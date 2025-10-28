@@ -24,3 +24,9 @@ Organizer EventTicket340::getOrganizer() const{
    // TO DO: implement function
    return this->organizer;
 }
+
+std::ostream& operator <<(std::ostream& os, const EventTicket340& event){
+   os << "Welcome to EventTicket 340" << std::endl;
+   return os; 
+}
+

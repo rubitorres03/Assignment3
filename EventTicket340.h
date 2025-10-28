@@ -17,10 +17,15 @@ class EventTicket340 {
 		~EventTicket340();
 
 		// Create a new organizer profile
-		void createOrganizer(const std::string& username, const std::string& email, const std::string& password, const std::string& bio, const std::string& profilePicture);
+		void createOrganizer(const std::string& username, const std::string& email, 
+			const std::string& password, const std::string& bio,
+			 const std::string& profilePicture);
 
 		// Retrieve the organizer object
 		Organizer getOrganizer() const;
+
+		//friend function
+		friend std::ostream& operator <<(std::ostream& os, const EventTicket340& event);
 };
 
 #endif // EVENTTICKET340_H
