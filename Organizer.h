@@ -5,6 +5,7 @@
    #include <string>
    #include "Event.h"
    #include "LinkedBagDS/LinkedBag.h"
+   #include <memory>
 
 
 
