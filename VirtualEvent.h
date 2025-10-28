@@ -22,7 +22,7 @@ public:
 
     bool sell(int quantity) override;
 
-    friend std::istream& operator>>(std::istream& in, std::shared_ptr<Event>& VirEventInput);
+    friend std::istream& operator>>(std::istream& in, std::shared_ptr<VirtualEvent>& VirEventInput);
     private:
         std::string streamLink;
         std::string audience;

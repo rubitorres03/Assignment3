@@ -56,11 +56,13 @@ void displayOrganizerMenu(Organizer& organizer){
 				string choice;
 				
 
-				std::shared_ptr<Event> EvntPtr = nullptr;
+				//std::shared_ptr<Event> EvntPtr = nullptr;
 				cin.ignore();
 				cout << "Which event type are you making (virtual or venue):  ";
 				getline(cin,choice);
 				if(choice == "virtual"){
+
+					std::shared_ptr<VirtualEvent> EvntPtr = nullptr;
 				// 	create a Virtual event object
 					//string name;
 					//string description;
@@ -90,9 +92,10 @@ void displayOrganizerMenu(Organizer& organizer){
 					//cout<< "Enter audience type:  ";
 					//getline(cin, audience);
 
-					EvntPtr = std::make_shared<VirtualEvent>();
+					
 					std::cin >> *EvntPtr;
 					EvntPtr = std::make_shared<VirtualEvent>(name,description,rating,soldTicketsCount,streamLink,audience);
+					organizer.createEvent(EvntPtr);
 				}else if(choice == "venue"){
 				// 	create a Venue even object
 					//string name;
@@ -128,13 +131,14 @@ void displayOrganizerMenu(Organizer& organizer){
 					//cin >> capacity;
 				
 					
-					EvntPtr = std::make_shared<VenueEvent>();
+					std::shared_ptr<VenueEvent> EvntPtr = nullptr;
 					std::cin >> *EvntPtr;
 					EvntPtr = std::make_shared<VenueEvent>(name,description,rating,soldTicketsCount,venue,dateTime,capacity);
+					organizer.createEvent(EvntPtr);
 				}
 				// organizer.createEvent(event);
 
-				organizer.createEvent(EvntPtr);
+				//organizer.createEvent(EvntPtr);
 
 				// Create the event and add it to the organizer's events
 				break;

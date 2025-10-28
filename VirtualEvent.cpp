@@ -39,7 +39,7 @@ VirtualEvent::VirtualEvent(const std::string& name, const std::string& descripti
         return true;
     }
 
-    std::istream& operator>>(std::istream& in, std::shared_ptr<Event>& VirEventInput){
+    std::istream& operator>>(std::istream& in, std::shared_ptr<VirtualEvent>& VirEventInput){
         std::string name;
 		std::string description;
         std::string streamLink;

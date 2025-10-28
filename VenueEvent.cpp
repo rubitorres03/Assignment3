@@ -43,7 +43,7 @@ bool VenueEvent::sell(int quantity) {
      }
 }
 
-std::istream& operator>>(std::istream& in, std::shared_ptr<Event>& VenEventInput){
+std::istream& operator>>(std::istream& in, std::shared_ptr<VenueEvent>& VenEventInput){
     std::string name;
 	std::string description;
     std::string venue;
