@@ -79,7 +79,7 @@ std::istream& operator>>(std::istream& in, std::shared_ptr<Event>& VenEventInput
         std::getline(in,convert);
         capacity = std::stoi(convert);
 
-        VenEventInput = std::make_shared<VirtualEvent>(name,description,rating,soldTicketsCount,venue,dateTime,capacity);
+        
 
         return in;
 }

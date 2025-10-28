@@ -90,8 +90,9 @@ void displayOrganizerMenu(Organizer& organizer){
 					//cout<< "Enter audience type:  ";
 					//getline(cin, audience);
 
-					//EvntPtr = std::make_shared<VirtualEvent>(name,description,rating,soldTicketsCount,streamLink,audience);
+					
 					std::cin >> EvntPtr;
+					EvntPtr = std::make_shared<VirtualEvent>(name,description,rating,soldTicketsCount,streamLink,audience);
 				}else if(choice == "venue"){
 				// 	create a Venue even object
 					//string name;
@@ -126,9 +127,10 @@ void displayOrganizerMenu(Organizer& organizer){
 					//cout<<"Enter capacity for event: ";
 					//cin >> capacity;
 				
-					//EvntPtr = std::make_shared<VenueEvent>(name,description,rating,soldTicketsCount,venue,dateTime,capacity);
+					
 
 					std::cin >> EvntPtr;
+					EvntPtr = std::make_shared<VenueEvent>(name,description,rating,soldTicketsCount,venue,dateTime,capacity);
 				}
 				// organizer.createEvent(event);
 
