@@ -32,9 +32,10 @@ std::ostream& operator <<(std::ostream& os, const EventTicket340& event){
 
 std::istream& operator>>(std::istream& in, EventTicket340& userInput){
    string username;
-   string email;
-   string password;
-   string profilePicture;
+	string email;
+	string password;
+	string bio;
+	string profilePicture;
 
    cout << "Please enter a username: ";
 	getline(in,username);

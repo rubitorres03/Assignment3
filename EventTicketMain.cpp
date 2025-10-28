@@ -269,7 +269,8 @@ int main(){
 
 	// call eventTicket340 createOrganizer function 
 	// replace /*...*/ with the right parameters
-	eventTicket340.createOrganizer(username,email,password,bio,profilePicture);
+
+	//eventTicket340.createOrganizer(username,email,password,bio,profilePicture);
 
 	// Retrieve the organizer 
 	Organizer currentOrganizer = eventTicket340.getOrganizer();
