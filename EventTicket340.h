@@ -25,7 +25,9 @@ class EventTicket340 {
 		Organizer getOrganizer() const;
 
 		//friend function
-		friend std::ostream& operator <<(std::ostream& os, const EventTicket340& event);
+		friend std::ostream& operator<<(std::ostream& os, const EventTicket340& event);
+
+		friend std::istream& operator>>(std::istream& in, EventTicket340& userInput);
 };
 
 #endif // EVENTTICKET340_H

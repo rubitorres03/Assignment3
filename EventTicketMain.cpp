@@ -240,29 +240,32 @@ int main(){
 	EventTicket340 eventTicket340; 
 
 	cout << eventTicket340; // calls the operator over load inside EventTicket340
+
+	
 	// TO DO: Ask the organizer to enter their information 
 	//        Instantiate a new Organizer object
 
-	string username;
-	string email;
-	string password;
-	string bio;
-	string profilePicture;
+	cin >> eventTicket340;
+	//string username;
+	//string email;
+	//string password;
+	//string bio;
+	//string profilePicture;
 
-	cout << "Please enter a username: ";
-	getline(cin,username);
+	//cout << "Please enter a username: ";
+	//getline(cin,username);
 
-	cout << "Please enter an email: ";
-	getline(cin,email);
+	//cout << "Please enter an email: ";
+	//getline(cin,email);
 
-	cout << "Please enter a password: ";
-	getline(cin,password);
+	//cout << "Please enter a password: ";
+	//getline(cin,password);
 
-	cout << "Please enter a bio: ";
-	getline(cin,bio);
+	//cout << "Please enter a bio: ";
+	//getline(cin,bio);
 
-	cout << "Please enter a profile picture: ";
-	getline(cin,profilePicture);
+	//cout << "Please enter a profile picture: ";
+	//getline(cin,profilePicture);
 
 	// call eventTicket340 createOrganizer function 
 	// replace /*...*/ with the right parameters

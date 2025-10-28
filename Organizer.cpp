@@ -70,12 +70,14 @@ int Organizer::getNumberOfEvents() const {
    return this->organizerEvents.getCurrentSize();
 }
 
-void Organizer::displayProfile() const {
-   std::cout << "User name: " << username << std::endl;
-   std::cout << "Email:  " << email << std::endl;
-   std::cout << " Bio: " << bio << std::endl;
-   std::cout << " Profile Picture:  " << profilePic << std::endl;
-}
+//void Organizer::displayProfile() const {
+//   std::cout << "User name: " << username << std::endl;
+//   std::cout << "Email:  " << email << std::endl;
+//   std::cout << " Bio: " << bio << std::endl;
+//   std::cout << " Profile Picture:  " << profilePic << std::endl;
+// }
+
+// Display Profile function replaced by operator<< overload
 
 
 bool Organizer::modifyPassword(const std::string& password){
@@ -142,7 +144,8 @@ bool Organizer::operator==(const Organizer& otherOrganizer) const {
    return (Organizer::username == otherOrganizer.username) && (Organizer::email == otherOrganizer.email);
 }
 
-std::ostream& operator <<(std::ostream& os, const Organizer& org){
+// Operator << overloading implementation
+std::ostream& operator<<(std::ostream& os, const Organizer& org){
    os << "User Name: " << org.username << "\n" 
       << "Email: " << org.email << "\n" 
       << "Bio: " << org.bio << "\n"

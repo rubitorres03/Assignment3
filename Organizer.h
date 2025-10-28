@@ -62,7 +62,8 @@
 
 
          bool operator==(const Organizer& otherOrganizer) const;
-         friend std::ostream& operator <<(std::ostream& os, const Organizer& org);
+         friend std::ostream& operator<<(std::ostream& os, const Organizer& org);
+         
    };
 
 
