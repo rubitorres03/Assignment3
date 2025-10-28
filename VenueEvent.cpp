@@ -43,5 +43,44 @@ bool VenueEvent::sell(int quantity) {
      }
 }
 
+std::istream& operator>>(std::istream& in, std::shared_ptr<Event>& VenEventInput){
+    std::string name;
+	std::string description;
+    std::string venue;
+	std::string dateTime;
+    std::string convert;
+	int rating;
+	int soldTicketsCount;
+    int capacity;
 
+        std::cout<< "Enter name of Event:";
+		std::getline(in,name);
+
+		std::cout<< "Enter description: ";
+		std::getline(in,description);
+
+		std::cout<< "Enter rating:";
+		std::getline(in,convert);
+        rating = std::stoi(convert);
+
+		std::cout<< "Enter number of sold Tickets: ";
+		std::getline(in,convert);
+        soldTicketsCount = std::stoi(convert);
+
+		
+		std::cout<< "Enter Venue Name: ";
+		std::getline(in,venue);
+
+		
+	    std::cout<< "Enter Date and Time: (Month/Day/Year)  ";
+		std::getline(in, dateTime);
+
+        std::cout<< "Enter capacity for event: "
+        std::getline(in,convert);
+        capacity = std::stoi(convert);
+
+        VenEventInput = std::make_shared<VirtualEvent>(name,description,rating,soldTicketsCount,venue,dateTime,capacity);
+
+        return in;
+}
 

@@ -39,4 +39,42 @@ VirtualEvent::VirtualEvent(const std::string& name, const std::string& descripti
         return true;
     }
 
+    std::istream& operator>>(std::istream& in, std::shared_ptr<Event>& VirEventInput){
+        std::string name;
+		std::string description;
+        std::string streamLink;
+		std::string audience;
+        std::string convert;
+		int rating;
+		int soldTicketsCount;
+					
+		
+
+		std::cout<< "Enter name of Event:";
+		std::getline(in,name);
+
+		std::cout<< "Enter description: ";
+		std::getline(in,description);
+
+		std::cout<< "Enter rating:";
+		std::getline(in,convert);
+        rating = std::stoi(convert);
+
+		std::cout<< "Enter number of sold Tickets: ";
+		std::getline(in,convert);
+        soldTicketsCount = std::stoi(convert);
+
+		
+		std::cout<< "Enter Stream Link: ";
+		std::getline(in,streamLink);
+
+		
+	    std::cout<< "Enter audience type:  ";
+		std::getline(in, audience);
+
+        VirEventInput = std::make_shared<VirtualEvent>(name,description,rating,soldTicketsCount,streamLink,audience);
+
+        return in;
+        
+    }
 

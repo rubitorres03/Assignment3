@@ -26,6 +26,7 @@ public:
 
     bool sell(int quantity);
 
+    friend std::istream& operator>>(std::istream& in, std::shared_ptr<Event>& VenEventInput);
 
 private: 
     std::string venue;       //data fields
