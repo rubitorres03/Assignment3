@@ -52,7 +52,7 @@
          void displayProfile() const;
 
          bool modifyPassword(const std::string& password);
-         bool createEvent(Event* event);
+         bool createEvent(std::shared_ptr<Event> evntPtr);
          void displayEventK(int k) const;
          void displayAllEvents();
          bool modifyEvent(int k);
