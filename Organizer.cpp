@@ -86,15 +86,15 @@ bool Organizer::modifyPassword(const std::string& password){
       return true;
    
 }
-bool Organizer::createEvent(Event* event){
+bool Organizer::createEvent(std::shared_ptr<Event> evntPtr){
    if(event != nullptr){
-      return organizerEvents.add(event);
+      return organizerEvents.add(evntPtr);
    }
    return false;
    
 }
 void Organizer::displayEventK(int k) const{
-   Node<Event*>* node = organizerEvents.findKthItem(k-1);
+   Node<std::shared_ptr<Event>>* node = organizerEvents.findKthItem(k-1);
    if(node && node->getItem() != nullptr){
       node->getItem()->display();
    }
@@ -102,7 +102,7 @@ void Organizer::displayEventK(int k) const{
 }
 
 void Organizer::displayAllEvents(){
-   std::vector<Event*> bagItems = organizerEvents.toVector();
+   std::vector<std::shared_ptr<Event>> bagItems = organizerEvents.toVector();
    int numberOfEntries = bagItems.size();
    for(int i = 0; i < numberOfEntries;i++){
       bagItems[i]->display();
@@ -110,7 +110,7 @@ void Organizer::displayAllEvents(){
    
 }
 bool Organizer::modifyEvent(int k){
-   Node<Event*>* node = organizerEvents.findKthItem(k-1);
+   Node<std::shared_ptr<Event>>* node = organizerEvents.findKthItem(k-1);
    if(node && node->getItem() != nullptr){
       return node->getItem()->modify();
 
@@ -119,7 +119,7 @@ bool Organizer::modifyEvent(int k){
 
 }
 bool Organizer::sellTicket(int k, int quantity){
-   Node<Event*>* node = organizerEvents.findKthItem(k-1);
+   Node<std::shared_ptr<Event>>* node = organizerEvents.findKthItem(k-1);
    if(node && node->getItem() != nullptr){
       return node->getItem()->sell(quantity);
 
@@ -128,9 +128,9 @@ bool Organizer::sellTicket(int k, int quantity){
 
 }
 bool Organizer::deleteEvent(int k){
-   Node<Event*>* node = organizerEvents.findKthItem(k-1);
+   Node<std::shared_ptr<Event>>* node = organizerEvents.findKthItem(k-1);
    if(node && node->getItem() != nullptr){
-      Event* ev = node->getItem();
+      std::shared_ptr<Event> ev = node->getItem();
       organizerEvents.remove(ev);
       return true;
 

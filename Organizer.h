@@ -18,7 +18,7 @@
       std::string bio;
       std::string profilePic;
 
-      LinkedBag<Event*> organizerEvents;
+      LinkedBag<std::shared_ptr<Event>> organizerEvents;
 
 
       public:

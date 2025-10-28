@@ -54,8 +54,9 @@ void displayOrganizerMenu(Organizer& organizer){
 			case 3: {
 				// TO DO: ask organizer to choose event type, then ask them to input event details.
 				string choice;
-				Event* event = nullptr;
+				// Event* event = nullptr;
 
+				std::shared_ptr<Event> EvntPtr = nullptr;
 				cin.ignore();
 				cout << "Which event type are you making (virtual or venue):  ";
 				getline(cin,choice);
@@ -89,8 +90,9 @@ void displayOrganizerMenu(Organizer& organizer){
 					cout<< "Enter audience type:  ";
 					getline(cin, audience);
 
-					event = new VirtualEvent(name,description,rating,soldTicketsCount,streamLink,audience);
+					// event = new VirtualEvent(name,description,rating,soldTicketsCount,streamLink,audience);
 					
+					EvntPtr = std::make_shared<VirtualEvent>(name,description,rating,soldTicketsCount,streamLink,audience);
 				}else if(choice == "venue"){
 				// 	create a Venue even object
 					string name;
@@ -125,10 +127,14 @@ void displayOrganizerMenu(Organizer& organizer){
 					cout<<"Enter capacity for event: ";
 					cin >> capacity;
 				
-					event = new VenueEvent(name,description,rating,soldTicketsCount,venue,dateTime,capacity);
+					// event = new VenueEvent(name,description,rating,soldTicketsCount,venue,dateTime,capacity);
 					
+					EvntPtr = std::make_shared<VenueEvent>(name,description,rating,soldTicketsCount,streamLink,audience);
 				}
-				organizer.createEvent(event);
+				// organizer.createEvent(event);
+
+				organizer.createEvent(EvntPtr);
+
 				// Create the event and add it to the organizer's events
 				break;
 			}
