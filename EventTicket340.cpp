@@ -37,19 +37,19 @@ std::istream& operator>>(std::istream& in, EventTicket340& userInput){
 	string bio;
 	string profilePicture;
 
-   cout << "Please enter a username: ";
+   std::cout << "Please enter a username: ";
 	getline(in,username);
 
-	cout << "Please enter an email: ";
+	std::cout << "Please enter an email: ";
 	getline(in,email);
 
-	cout << "Please enter a password: ";
+	std::cout << "Please enter a password: ";
 	getline(in,password);
 
-	cout << "Please enter a bio: ";
+	std::cout << "Please enter a bio: ";
 	getline(in,bio);
 
-	cout << "Please enter a profile picture: ";
+	std::cout << "Please enter a profile picture: ";
 	getline(in,profilePicture);
 
    userInput.createOrganizer(username,email,password,bio,profilePicture);
