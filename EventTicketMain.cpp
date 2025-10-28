@@ -93,7 +93,7 @@ void displayOrganizerMenu(Organizer& organizer){
 				//    return an error message that includes the size of the LinkedBag
 				cin.ignore();
 				int k;
-				cout <<"Enter what Kth element you want to view: ";
+				cout <<"Enter the event index you want to view (1 being the latest event created): ";
 				cin >> k;
 				int size = organizer.getNumberOfEvents();
 				if(k > size){
@@ -114,7 +114,7 @@ void displayOrganizerMenu(Organizer& organizer){
 				//    return an error message that includes the size of the LinkedBag
 				cin.ignore();
 				int k;
-				cout <<"Enter what Kth element you want to modify: ";
+				cout <<"Enter the event index you want to modify (1 being the latest event created): ";
 				cin >> k;
 
 				int size = organizer.getNumberOfEvents();
@@ -135,7 +135,7 @@ void displayOrganizerMenu(Organizer& organizer){
 				cin.ignore();
 				int k;
 				int quantity;
-				cout << "Enter the event index to sell tickets: (1 being the first event created) ";
+				cout << "Enter the event index to sell tickets (1 being the latest event created):  ";
 				cin >> k;
 				cout << "Enter ticket quantity: ";
 				cin >> quantity;
@@ -156,7 +156,7 @@ void displayOrganizerMenu(Organizer& organizer){
 				//    return an error message that includes the size of the LinkedBag
 				cin.ignore();
 				int k;
-				cout <<"Enter what Kth element you want to delete: ";
+				cout <<"Enter the event index you want to delete (1 being the latest event created): ";
 				cin >> k;
 				int size = organizer.getNumberOfEvents();
 				if(k > size){
