@@ -129,7 +129,7 @@ void displayOrganizerMenu(Organizer& organizer){
 				
 					// event = new VenueEvent(name,description,rating,soldTicketsCount,venue,dateTime,capacity);
 					
-					EvntPtr = std::make_shared<VenueEvent>(name,description,rating,soldTicketsCount,streamLink,audience);
+					EvntPtr = std::make_shared<VenueEvent>(name,description,rating,soldTicketsCount,venue,dateTime,capacity);
 				}
 				// organizer.createEvent(event);
 

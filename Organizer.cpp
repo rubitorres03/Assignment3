@@ -87,7 +87,7 @@ bool Organizer::modifyPassword(const std::string& password){
    
 }
 bool Organizer::createEvent(std::shared_ptr<Event> evntPtr){
-   if(event != nullptr){
+   if(evntPtr != nullptr){
       return organizerEvents.add(evntPtr);
    }
    return false;
