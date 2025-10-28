@@ -26,7 +26,7 @@ Organizer EventTicket340::getOrganizer() const{
 }
 
 std::ostream& operator <<(std::ostream& os, const EventTicket340& event){
-   os << "Welcome to EventTicket 340" << std::endl;
+   os << "Welcome to EventTicket 340! " << std::endl;
    return os; 
 }
 

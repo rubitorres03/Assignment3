@@ -79,7 +79,6 @@ void Organizer::displayProfile() const {
 
 
 bool Organizer::modifyPassword(const std::string& password){
-   
 
       setPassword(password);
       return true;
@@ -142,3 +141,13 @@ bool Organizer::deleteEvent(int k){
 bool Organizer::operator==(const Organizer& otherOrganizer) const {
    return (Organizer::username == otherOrganizer.username) && (Organizer::email == otherOrganizer.email);
 }
+
+friend std::ostream& operator <<(std::ostream& os, const Organizer& org){
+   os << "User Name: " << org.username << "\n" 
+      << "Email: " << org.email << "\n" 
+      << "Bio: " << org.bio << "\n"
+      << "Profile Picture: " << org.profilePic << "\n";
+
+      return os;
+}
+

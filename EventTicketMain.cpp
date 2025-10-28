@@ -37,7 +37,7 @@ void displayOrganizerMenu(Organizer& organizer){
 			case 1:{
 				// TO DO: display organizer's profile information
 				//      : e.g. organizer.displayProfile();
-				organizer.displayProfile();
+				cout << organizer;
 				break;
 			}
 			case 2: {
@@ -239,9 +239,10 @@ int main(){
 	// With this implementation, the application will only have one organizer
 	EventTicket340 eventTicket340; 
 
-	cout << "\n Welcome to EventTicket340:" << endl;
+	cout << eventTicket340; // calls the operator over load inside EventTicket340
 	// TO DO: Ask the organizer to enter their information 
 	//        Instantiate a new Organizer object
+
 	string username;
 	string email;
 	string password;

@@ -62,7 +62,7 @@
       
       std::cout << "Modify event: " << name << std::endl;
       std::cin.ignore();
-      std::cout << "Enter new event name: ";
+      std::cout << "Enter new name for event: ";
       std::getline(std::cin, newValue);
       if (!newValue.empty()) setName(newValue);
    
