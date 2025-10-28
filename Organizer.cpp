@@ -142,7 +142,7 @@ bool Organizer::operator==(const Organizer& otherOrganizer) const {
    return (Organizer::username == otherOrganizer.username) && (Organizer::email == otherOrganizer.email);
 }
 
-friend std::ostream& operator <<(std::ostream& os, const Organizer& org){
+std::ostream& operator <<(std::ostream& os, const Organizer& org){
    os << "User Name: " << org.username << "\n" 
       << "Email: " << org.email << "\n" 
       << "Bio: " << org.bio << "\n"
