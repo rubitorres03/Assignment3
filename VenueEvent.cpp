@@ -85,13 +85,13 @@ std::istream& operator>>(std::istream& in, std::shared_ptr<VenueEvent>& VenEvent
 }
 
 std::ostream& operator<<(std::ostream& os, const std::shared_ptr<VenueEvent>& VenDisplay){
-    os << "Event Name: " << VenDisplay.name << "\n" 
-        << "Description: " << VenDisplay.description << "\n"
-        << "Rating: " << VenDisplay.rating << "\n"
-        << "Tickets sold: " << VenDisplay.soldTicketsCount << "\n"
-        << "Name of Venue: " << VenDisplay.venue << "\n" 
-        << "Date and Time: " << VenDisplay.dateTime << "\n"
-        << "Capacity: " << VenDisplay.capacity << "\n";
+    os << "Event Name: " << VenDisplay->getName() << "\n" 
+        << "Description: " << VenDisplay->getDescription() << "\n"
+        << "Rating: " << VenDisplay->getRating() << "\n"
+        << "Tickets sold: " << VenDisplay->getSoldTicketsCount() << "\n"
+        << "Name of Venue: " << VenDisplay->getVenue() << "\n" 
+        << "Date and Time: " << VenDisplay->getDateTime() << "\n"
+        << "Capacity: " << VenDisplay->getCapacity() << "\n";
 
         return os;
 

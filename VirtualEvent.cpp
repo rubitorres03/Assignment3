@@ -80,12 +80,12 @@ VirtualEvent::VirtualEvent(const std::string& name, const std::string& descripti
 
 
     std::ostream& operator<<(std::ostream& os, const std::shared_ptr<VirtualEvent>& VirDisplay){
-    os << "Event Name: " << VirnDisplay.name << "\n" 
-        << "Description: " << VirDisplay.description << "\n"
-        << "Rating: " << VirDisplay.rating << "\n"
-        << "Tickets sold: " << VirDisplay.soldTicketsCount << "\n"
-        << "Stream Link: " << VirDisplay.streamLink << "\n" 
-        << "Audience: " << VirDisplay.Audience << "\n";
+    os << "Event Name: " << VirDisplay->getName() << "\n" 
+        << "Description: " << VirDisplay->getDescription() << "\n"
+        << "Rating: " << VirDisplay->getRating() << "\n"
+        << "Tickets sold: " << VirDisplay->getSoldTicketsCount() << "\n"
+        << "Stream Link: " << VirDisplay->getStreamLink() << "\n" 
+        << "Audience: " << VirDisplay->getAudience() << "\n";
 
 
         return os;

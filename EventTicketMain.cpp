@@ -83,8 +83,8 @@ void displayOrganizerMenu(Organizer& organizer){
 			case 4:{
 				// TO DO: display all organizer's events
 				//        You may re-use code from class demo
-				//organizer.displayAllEvents();
-				organizer.getLinkedBag();
+				organizer.displayAllEvents();
+				
 
 				
 				

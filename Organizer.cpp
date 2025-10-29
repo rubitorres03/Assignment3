@@ -105,7 +105,7 @@ void Organizer::displayAllEvents(){
    std::vector<std::shared_ptr<Event>> bagItems = organizerEvents.toVector();
    int numberOfEntries = bagItems.size();
    for(int i = 0; i < numberOfEntries;i++){
-      std::cout << bagItems[i] << "\n";
+      bagItems[i]->display();
 
    }
    
