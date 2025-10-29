@@ -9,7 +9,20 @@
 EventTicket340::EventTicket340(){}
 
 // TO DO: implement destructor
-EventTicket340::~EventTicket340(){}
+EventTicket340::~EventTicket340(){
+	std::cout << "EventTicket 340 destructor called." << std::endl;
+}
+
+EventTicket340::EventTicket340(const EventTicket340& other){		     // Copy constructor
+   this->organizer = other.organizer;
+}
+
+EventTicket340& EventTicket340::operator=(const EventTicket340& other){ // Assignment operator
+   if(this != &other){
+	  this->organizer = other.organizer;
+   }
+   return *this;
+}
 
 void EventTicket340::createOrganizer(const std::string& username, const std::string& email, const std::string& password, const std::string& bio, const std::string& profilePicture){
    // TO DO: implement function

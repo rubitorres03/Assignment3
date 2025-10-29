@@ -16,6 +16,12 @@ class EventTicket340 {
 		EventTicket340();
 		~EventTicket340();
 
+		EventTicket340(const EventTicket340& other);		     // Copy constructor
+
+		EventTicket340& operator=(const EventTicket340& other); // Assignment operator
+
+
+
 		// Create a new organizer profile
 		void createOrganizer(const std::string& username, const std::string& email, 
 			const std::string& password, const std::string& bio,
