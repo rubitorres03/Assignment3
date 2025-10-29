@@ -17,7 +17,11 @@
 	public:
 	Event();
 	Event(const std::string& name, const std::string& description, int rating, int soldTicketsCount);
-	virtual ~Event();
+	virtual ~Event(); //destructor 
+
+	Event(const Event& otherEvent); //copy constructor
+
+	Event& operator=(const Event& otherEvent); //assignment operator
 
 	void setName(const std::string& name);
 	std::string getName() const;

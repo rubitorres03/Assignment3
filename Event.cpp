@@ -11,8 +11,27 @@
    Event::Event(const std::string& name, const std::string& description, int rating, int soldTicketsCount) :
    name(name), description(description),rating(rating), soldTicketsCount(soldTicketsCount){}
 
-   Event::~Event(){
+   Event::~Event(){     //destructor
       std::cout << "Event: " << name <<std::endl;
+   }
+
+   Event::Event(const Event& otherEvent)     //copy constructor
+   : name(otherEvent.name),
+     description(otherEvent.description),
+     rating(otherEvent.rating),
+     soldTicketsCount(otherEvent.soldTicketsCount) {
+      std::cout << "Event copied: " << name << std::endl;
+   }
+
+   Event& Event::operator=(const Event& otherEvent) {    //assignment operator
+      if (this != &otherEvent) {
+         name = otherEvent.name;
+         description = otherEvent.description;
+         rating = otherEvent.rating;
+         soldTicketsCount = otherEvent.soldTicketsCount;
+      }
+      std::cout << "Event assigned: " << name << std::endl;
+      return *this;
    }
    
    void Event::setName(const std::string& name){
