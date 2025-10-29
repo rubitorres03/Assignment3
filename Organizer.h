@@ -29,7 +29,7 @@
 
          Organizer(const Organizer& otherOrganizer); //copy constructor
 
-         Organzier& operator=(const Organizer& otherOrganizer); //assignment operator
+         Organizer& operator=(const Organizer& otherOrganizer); //assignment operator
 
 
          
