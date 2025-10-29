@@ -25,7 +25,11 @@
       public:
          Organizer();
          Organizer(const std::string& username, const std::string& email, const std::string& password, const std::string& bio, const std::string& profilePic);
-         virtual ~Organizer();
+         virtual ~Organizer();  //destructor
+
+         Organizer(const Organizer& otherOrganizer); //copy constructor
+
+         Organzier& operator=(const Organizer& otherOrganizer); //assignment operator
 
 
          

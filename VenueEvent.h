@@ -13,7 +13,11 @@ public:
     VenueEvent(const std::string& name, const std::string& description,int rating, int soldTicketsCount,
          const std::string& venue, const std::string& dateTime, int capacity);
 
-    ~VenueEvent();
+    ~VenueEvent();   //destructor
+
+    VenueEvent(const VenueEvent& otherVenueEvent); //copy constructor
+
+    VenueEvent& operator=(const VenueEvent& otherVenueEvent); //assignment operator
 
     void setVenue(const std:: string& venue);
     std::string getVenue() const;

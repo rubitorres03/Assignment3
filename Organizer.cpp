@@ -12,9 +12,30 @@ Organizer::Organizer(const std::string& username, const std::string& email, cons
 username(username), email(email), password(password), bio(bio), profilePic(profilePic){
 }
 // TO DO: function implementations
-Organizer::~Organizer(){
+Organizer::~Organizer(){   //destructor
    std::cout << "Organizer: " << Organizer::username <<std::endl;
 }
+
+Organizer::Organizer(const Organizer& otherOrganizer)    //copy constructor
+: username(otherOrganizer.username), email(otherOrganizer.email),
+  password(otherOrganizer.password), bio(otherOrganizer.bio),
+  profilePic(otherOrganizer.profilePic), organizerEvents(otherOrganizer.organizerEvents) {
+   std::cout << "Organizer copied: " << username << std::endl;
+} 
+
+Organizer& Organizer::operator=(const Organizer& otherOrganizer) {    //assignment operator
+   if (this != &otherOrganizer) {
+      username = otherOrganizer.username;
+      email = otherOrganizer.email;
+      password = otherOrganizer.password;
+      bio = otherOrganizer.bio;
+      profilePic = otherOrganizer.profilePic;
+      organizerEvents = otherOrganizer.organizerEvents;
+   }
+   std::cout << "Organizer assigned: " << username << std::endl;
+   return *this;
+}
+
 
 
 void Organizer::setUsername(const std::string& username){

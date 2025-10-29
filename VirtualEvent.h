@@ -13,7 +13,11 @@ public:
     VirtualEvent(const std::string& name, const std::string& description, int rating, int soldTicketsCount,
          const std::string& streamLink, const std::string& audience);
 
-    ~VirtualEvent();
+    ~VirtualEvent();  //destructor
+
+    VirtualEvent(const VirtualEvent& otherVirtualEvent); //copy constructor
+
+    VirtualEvent& operator=(const VirtualEvent& otherVirtualEvent); //assignment operator
 
     void setStreamLink(const std:: string& streamLink);
     std::string getStreamLink() const;

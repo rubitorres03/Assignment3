@@ -10,8 +10,24 @@ VirtualEvent::VirtualEvent(const std::string& name, const std::string& descripti
     int soldTicketsCount, const std::string& streamLink, const std::string& audience): Event (name, description,
     rating, soldTicketsCount), streamLink(streamLink), audience(audience){}
 
-    VirtualEvent::~VirtualEvent(){
+    VirtualEvent::~VirtualEvent(){      //destructor
         std::cout << "Virtual Event deconstructor: " << name << std::endl;
+    }
+
+    VirtualEvent::VirtualEvent(const VirtualEvent& otherVirtualEvent)    //copy constructor
+    : Event(otherVirtualEvent), streamLink(otherVirtualEvent.streamLink), 
+    audience(otherVirtualEvent.audience) {
+        std::cout << "VirtualEvent copied: " << name << std::endl;
+    }
+
+    VirtualEvent& VirtualEvent::operator=(const VirtualEvent& otherVirtualEvent) {   //assignment operator
+        if (this != &otherVirtualEvent) {
+            Event::operator=(otherVirtualEvent); 
+            streamLink = otherVirtualEvent.streamLink;
+            audience = otherVirtualEvent.audience;
+        }
+        std::cout << "VirtualEvent assigned: " << name << std::endl;
+        return *this;
     }
 
     void VirtualEvent::setStreamLink(const std::string& streamLink) {

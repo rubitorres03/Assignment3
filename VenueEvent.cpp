@@ -7,7 +7,24 @@ VenueEvent::VenueEvent() : Event(), venue(""), dateTime(""), capacity(0) {}
 VenueEvent::VenueEvent(const std::string& name, const std::string& description, int rating, int soldTicketsCount,const std::string& venue,const std::string&dateTime, int capacity): 
 Event(name,description, rating, soldTicketsCount),venue(venue),dateTime(dateTime),capacity(capacity){}
 
-VenueEvent::~VenueEvent(){}
+VenueEvent::~VenueEvent(){}     //destructor
+
+VenueEvent::VenueEvent(const VenueEvent& otherVenueEvent)     //copy constructor
+: Event(otherVenueEvent), venue(otherVenueEvent.venue), dateTime(otherVenueEvent.dateTime), 
+capacity(otherVenueEvent.capacity) {
+    std::cout << "VenueEvent copied: " << name << std::endl;
+}
+
+VenueEvent& VenueEvent::operator=(const VenueEvent& otherVenueEvent) {    //assignment operator
+    if (this != &otherVenueEvent) {
+        Event::operator=(otherVenueEvent); // Call base class assignment operator
+        venue = otherVenueEvent.venue;
+        dateTime = otherVenueEvent.dateTime;
+        capacity = otherVenueEvent.capacity;
+    }
+    std::cout << "VenueEvent assigned: " << name << std::endl;
+    return *this;
+}
 
 void VenueEvent::setVenue(const std::string& venue) {
     this->venue = venue;
