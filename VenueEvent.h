@@ -29,6 +29,8 @@ public:
 
     friend std::istream& operator>>(std::istream& in, std::shared_ptr<VenueEvent>& VenEventInput);
 
+    friend std::ostream& operator<<(std::ostream& os, const std::shared_ptr<VenueEvent>& VenDisplay);
+
 private: 
     std::string venue;       //data fields
     std::string dateTime;

@@ -28,6 +28,7 @@
          virtual ~Organizer();
 
 
+         
          void setUsername(const std::string& username);
          std::string getUsername() const;
 

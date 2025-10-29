@@ -24,6 +24,8 @@ public:
     bool sell(int quantity) override;
 
     friend std::istream& operator>>(std::istream& in, std::shared_ptr<VirtualEvent>& VirEventInput);
+    
+    friend std::ostream& operator<<(std::ostream& os, const std::shared_ptr<VirtualEvent>& VirDisplay);
     private:
         std::string streamLink;
         std::string audience;
